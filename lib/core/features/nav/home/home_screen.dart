@@ -60,11 +60,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           Text("Good morning Liam!",
                               style: GoogleFonts.poppins(
                                   fontSize: 14, color: Colors.grey[600])),
-                          const SizedBox(height: 4),
-                          Text("21 Sept, 2025",
+
+                          const SizedBox(height: 6),
+
+                          Text(homeController.formattedSelectedDate,
                               style: GoogleFonts.poppins(
                                   fontSize: 16, fontWeight: FontWeight.w600,
-              
                               )),
                         ],
                       ),
@@ -84,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
-                        child: _summaryCard("Assigned tasks", "21", HexColor('#EEEFFF'),
+                        child: _summaryCard("Assigned tasks", "${taskController.selectedTab.value==0?taskController.filteredTasks.length:0}", HexColor('#EEEFFF'),
                             HexColor('#855EA9')),
                       ),
               
@@ -92,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 8,
                       ),
                       Expanded(
-                        child: _summaryCard("Completed tasks", "31",
+                        child: _summaryCard("Completed tasks", "${taskController.selectedTab.value==1?taskController.filteredTasks.length:0}",
                             Colors.green.shade50, Colors.green),
                       ),
                     ],

@@ -181,10 +181,9 @@ class TaskController extends GetxController {
 
     debugPrint("formattedDate:${formattedDate.value}");
 
+    /// choose date after get data
     filterTasksByDate(date);
 
-    ///retrive water date  for today
-   // retriveWaterCalories(formattedDate.value);
   }
 
 
@@ -192,7 +191,7 @@ class TaskController extends GetxController {
   /// Filter tasks where startDate OR endDate matches the selected date
   void filterTasksByDate(DateTime selectedDate) {
     // Optional: show toast for debugging
-    Toast.errorToast("Selected: ${DateFormat('yyyy-MM-dd').format(selectedDate)}");
+   // Toast.errorToast("Selected: ${DateFormat('yyyy-MM-dd').format(selectedDate)}");
 
     filteredDateTasks.value = tasks.where((task) {
       try {

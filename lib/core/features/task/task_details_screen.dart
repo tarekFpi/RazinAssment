@@ -56,7 +56,7 @@ class _TaskDetailsScreenState extends State<TaskDetailsScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title:   Text(
-          "View Task  ${widget.task['id']}",
+          "View Task",
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.w600,
